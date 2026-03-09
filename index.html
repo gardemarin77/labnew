@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ice Rinks Toronto</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="my-map"></div>
+
+    <!-- Filter buttons -->
+    <div id="filters">
+        <strong>Filter by Size:</strong><br><br>
+        <button onclick="filterRinks('all')">Show All</button>
+        <button onclick="filterRinks('NHL(200X85)')">NHL</button>
+        <button onclick="filterRinks('International(200X100)')">International</button>
+        <button onclick="filterRinks('Regular(185X85)')">Regular</button>
+        <button onclick="filterRinks('Undersized(less than 185X85)')">Undersized</button>
+        <button onclick="filterRinks('None')">None</button>
+    </div>
+
+    <!-- Legend -->
+    <div id="legend">
+        <strong>Ice Pad Size</strong><br><br>
+        <span style="color:#ff1a1a">●</span> NHL (200x85)<br>
+        <span style="color:#ff9900">●</span> International (200x100)<br>
+        <span style="color:#00cc44">●</span> Regular (185x85)<br>
+        <span style="color:#cc00ff">●</span> Undersized (&lt;185x85)<br>
+        <span style="color:#00cfff">●</span> None
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
